@@ -1,0 +1,56 @@
+@use 'sass:map';
+$base-hues: (
+  primary: 220, // Blue hue
+  accent: 345    // Red hue
+);
+
+// Define the steps for lightness and saturation variations
+$lightness-steps: (
+  lightest: 90%,
+  light: 75%,
+  base: 50%,
+  dark: 35%,
+  darkest: 20%
+);
+
+$saturation-steps: (
+  muted: 40%,
+  base: 70%,
+  vibrant: 90%
+);
+
+// Map to store the generated color palette
+$color-palette: [];
+
+// Loop through each base hue
+@each $name, $hue in $base-hues {
+  // Create a sub-map for the current hue
+  $current-hue-colors: [];
+
+  // Loop through saturation variations
+  @each $sat-name, $saturation in $saturation-steps {
+    // Loop through lightness variations
+    @each $light-name, $lightness in $lightness-steps {
+      $color-name: #{$name}-#{$sat-name}-#{$light-name};
+      $hsl-color: hsl($hue, $saturation, $lightness);
+      $current-hue-colors: map.merge($current-hue-colors, (#{$color-name}: $hsl-color));
+    }
+  }
+  // Merge the current hue's colors into the main palette
+  $color-palette: map.merge($color-palette, ($name: $current-hue-colors));
+}
+
+// Example usage:
+// Accessing a specific color
+.element-primary-base-base {
+  background-color: map.get(map.get($color-palette, primary), primary-base-base);
+}
+
+// Generating CSS custom properties (variables)
+:root {
+  @each $hue-key, $hue-map in $color-palette {
+    @each $color-key, $color-value in $hue-map {
+      --color-#{$color-key}: #{$color-value};
+    }
+  }
+}
