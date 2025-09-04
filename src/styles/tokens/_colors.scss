@@ -1,4 +1,12 @@
 @use 'sass:map';
+
+/// --------------------------------------------------
+/// tokens/_colors.scss
+/// --------------------------------------------------
+/// This file is intended for defining global colors in HSL
+///  format used throughout the project.
+/// --------------------------------------------------
+
 $base-hues: (
   primary: 220, // Blue hue
   accent: 345    // Red hue
@@ -54,3 +62,22 @@ $color-palette: [];
     }
   }
 }
+
+
+
+
+//////////////////
+/// Another simplier solution that utilizes a custom tint-color function
+/// Add @use 'sass:color';
+// @function tint-color($color, $weight) {
+//   @return color.mix(white, $color, $weight);
+// }
+
+
+
+// // Define your base color
+// $base-color: #eb3349; // A shade of blue
+
+// .duh {
+//   background-color: tint-color($base-color, 20%); // Lightens $primary-color by mixing it with 20% white
+// }

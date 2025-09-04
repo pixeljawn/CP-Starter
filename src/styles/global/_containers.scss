@@ -1,0 +1,10 @@
+/// --------------------------------------------------
+/// global/_contaioers.scss
+/// --------------------------------------------------
+/// This file is intended for defining the .Parent and
+/// .Child container blocks used throughout the project.
+/// --------------------------------------------------
+.Parent {
+  display: grid;
+  justify-items: center;
+}

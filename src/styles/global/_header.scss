@@ -1,0 +1,51 @@
+/// --------------------------------------------------
+/// global/_header.scss
+/// --------------------------------------------------
+/// This file is intended for defining the header
+/// container block used throughout the project.
+/// --------------------------------------------------
+@property --c {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #eb3349;
+}
+
+header,
+.Parent {
+  padding: 8vh 4vw;
+}
+
+/* 1- Needed for firefox to have a valid output */
+header {
+  --c: hsl(352.7, 100%, 67.8%);
+  /* 1 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: --c 0.5s;
+  background: radial-gradient(var(--c), #b82525);
+  inline-size: 100%;
+  block-size: var(--size-global-15);
+  color: var(--color-light);
+  &:hover {
+    --c: hsl(323.8, 90.3%, 67.6%);
+  }
+  h1,
+  h2 {
+    margin-block: 0;
+    letter-spacing: 0.013em;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 5px 5px 8px rgba(0, 0, 0, 0.5);
+    /* A separate shadow with blur and transparency */
+  }
+}
+
+header {
+  > * {
+    text-align: center;
+  }
+  h1 {
+    -webkit-margin-after: 0.25em;
+    margin-block-end: 0.25em;
+  }
+}

@@ -7,8 +7,8 @@
   * @version     0.5
 */
 @forward './abstracts/_variables.scss';
-@forward './abstracts/_mixins.scss';
+@forward './base/_reset.scss';
 @forward './modules/sanitize.module.scss';
 @forward './components/_buttons.scss';
 @forward './modules/base.module.scss';
-@forward './components/_nav.scss';
+@forward './tokens/_colors.scss';
