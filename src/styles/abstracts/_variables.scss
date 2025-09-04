@@ -1,0 +1,53 @@
+/// --------------------------------------------------
+/// abstracts/_variables.scss
+/// --------------------------------------------------
+/// This file is intended for defining global SCSS variables
+/// used throughout the project. Place all font stacks,
+/// breakpoints, z-index layers, and any other design tokens
+/// (except color palettes and spacing scales) here to ensure
+/// consistency and maintainability. Import this file wherever
+/// you need access to these shared variables.
+/// --------------------------------------------------
+
+
+:root {
+	--multiplier-0: 1.5;
+	--multiplier-1: 2;
+	--multiplier-2: 3;
+	--multiplier-3: 4;
+	--font-size-sm: 0.875rem;
+	--font-size-lg: 3.5rem;
+	--font-size-fluid-0: max(0.875rem, min(2vw, 1rem));
+	--font-size-fluid-1: max(1rem, min(4vw, 1.5rem));
+	--font-size-fluid-2: max(1.5rem, min(6vw, 2.5rem));
+	--font-size-fluid-3: max(2rem, min(9vw, 3.5rem));
+	--size-global-0: 0.25rem;
+	--size-global-1: calc(0.25rem * var(--multiplier-1));
+	--size-global-2: calc(0.25rem * var(--multiplier-3));
+	--size-global-3: calc(1rem * var(--multiplier-0));
+	--size-global-4: calc(1rem * var(--multiplier-1));
+	--size-global-5: calc(1rem * var(--multiplier-2));
+	--size-global-10: 10rem;
+	--size-global-15: calc(10rem * var(--multiplier-0));
+	--size-global-20: calc(10rem * var(--multiplier-1));
+	--size-px-0: 4px;
+	--size-px-1: 8px;
+	--size-px-2: 16px;
+	--size-px-3: 24px;
+	--size-px-4: 32px;
+	--size-px-5: 48px;
+	--size-fluid-1: max(0.5rem, min(1vw, 1rem));
+	--size-fluid-2: max(1rem, min(2vw, 1.5rem));
+	--size-fluid-3: max(1.5rem, min(3vw, 2rem));
+	--size-fluid-4: max(2rem, min(4vw, 3rem));
+	--size-fluid-5: max(4rem, min(5vw, 5rem));
+	--trans-light: hsla(0, 0%, 0%, 0.3);
+	--trans-dark: hsla(0, 0%, 0%, 0.7);
+	--ease-2: cubic-bezier(0.25, 0, 0.4, 1);
+	--radius-sm: 0.5em;
+	--radius-md: 0.625em;
+	--shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+	--shadow-raised: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+	--decoration-text-link: underline dotted;
+	--decoration-text-link-hover: underline;
+}

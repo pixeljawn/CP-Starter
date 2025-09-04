@@ -1,0 +1,14 @@
+/**
+  * @STYLE.SCSS
+  *
+  * Imports necessary files used for development projects.
+  *
+  *
+  * @version     0.5
+*/
+@forward './abstracts/_variables.scss';
+@forward './abstracts/_mixins.scss';
+@forward './modules/sanitize.module.scss';
+@forward './components/_buttons.scss';
+@forward './modules/base.module.scss';
+@forward './components/_nav.scss';
