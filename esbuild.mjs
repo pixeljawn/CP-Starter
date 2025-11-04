@@ -39,3 +39,5 @@ await esbuild
   })
   .then(() => console.log("⚡ Build complete! ⚡"))
   .catch(() => process.exit(1));
+
+  
