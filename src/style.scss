@@ -1,0 +1,16 @@
+/**
+  * @STYLE.SCSS
+  *
+  * Imports necessary files used for development projects.
+  *
+  *
+  * @version     0.5
+*/
+@use './abstracts/_variables.scss';
+@use './base/_reset.scss';
+@use './global/_containers.scss';
+@use './global/_header.scss';
+@use './global/_footer.scss';
+@use './layout/_grid.scss';
+@use './utils/_helpers.scss';
+@use './tokens/_colors.scss';

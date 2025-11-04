@@ -1,0 +1,31 @@
+{
+  "name": "cp-starter",
+  "version": "1.0.0",
+  "description": "Codepen demo projects hosted here so I don't f up my demo pen. ;)",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./esbuild.mjs",
+    "watch": "node ./esbuild.mjs --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pixeljawn/CP-Starter.git"
+  },
+  "author": "PixelJawn <atseadesign@gmail.com>",
+  "license": "MIT",
+  "browserslist": [
+    "last 2 versions",
+    "> 0.9% and not dead",
+    "Firefox ESR"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.25.9",
+    "esbuild-sass-plugin": "^3.3.1",
+    "postcss": "^8.5.6",
+    "postcss-preset-env": "^10.3.1"
+  }
+}
